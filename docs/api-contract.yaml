@@ -1,0 +1,41 @@
+openapi: 3.0.3
+info:
+  title: JustInTime - FloatFry MRP API Contract
+  description: API contract supporting Floor Manager, Stamper, Production Operative, Product Engineer, Production Manager, Marketing Director, and Admin clients.
+  version: 1.0.0
+paths:
+  /login:
+    post:
+      summary: User authentication
+      responses:
+        200:
+          description: Successful authentication
+  /machines:
+    get:
+      summary: Get live machine status
+      responses:
+        200:
+          description: List of machines and telemetry
+  /orders:
+    get:
+      summary: Get product orders list
+      responses:
+        200:
+          description: List of orders
+    post:
+      summary: Place a new order
+      responses:
+        201:
+          description: Order created
+  /materials:
+    get:
+      summary: Get inventory material availability
+      responses:
+        200:
+          description: List of materials
+  /purchase-orders:
+    post:
+      summary: Trigger automatic or manual purchase order
+      responses:
+        201:
+          description: Purchase order triggered
